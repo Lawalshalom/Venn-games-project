@@ -12,6 +12,7 @@ function analyzeTasks(string){
     const N = Number.parseFloat(multiLine[0]);
     const users = [];
 
+    //get users from input
     for (let i = 1; i <= N; i++){
         let username = 'user' + i;
         let userDetails = multiLine[i].split(' ');
@@ -26,6 +27,7 @@ function analyzeTasks(string){
          users.push(user)
     };
 
+    //get tasks from input
     const T = multiLine[N+1];
     const taskDetails = [];
     for (let i = 1; i <= Number.parseFloat(T); i++) {
@@ -44,6 +46,7 @@ function analyzeTasks(string){
        taskDetails.push(task);
     };
 
+    //calculate user averages
     let userAverages = [];
     let countries = [];
     users.forEach(user => {
@@ -65,6 +68,8 @@ function analyzeTasks(string){
         userAverage
         });
     });
+
+    //calculate country averages
     const countryAverages = [];
     countries.forEach(country => {
         let countryName = country.country;
@@ -91,9 +96,11 @@ function analyzeTasks(string){
         });
     });
 
-    userAverages.sort((a, b) => a.userAverage < b.userAverage);
-    countryArr.sort((a, b) => a.averageTime < b.averageTime);
+    //sort the results
+    userAverages.sort((a, b) => a.userAverage - b.userAverage);
+    countryArr.sort((a, b) => a.averageTime - b.averageTime);
 
+    //display lists as strings
     let userString = [];
     let countryString = [];
     userAverages.forEach(user => {
