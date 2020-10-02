@@ -1,0 +1,35 @@
+{
+	"name": "test-node-api",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Femi Lawal",
+	"main": "analyzeTasks.js",
+	"dependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.5.0",
+		"@testing-library/user-event": "^7.2.1",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"build": "npm build",
+		"test": "npm run test"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
