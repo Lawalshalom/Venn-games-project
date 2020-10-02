@@ -1,9 +1,8 @@
 const string = `2
 1 PT
 2 US
-4
+3
 1 1 10
-3 8 35
 2 1 5
 3 2 10
 `
@@ -92,8 +91,8 @@ function analyzeTasks(string){
         });
     });
 
-    userAverages.sort((a, b) => a.userAverage > b.userAverage);
-    countryArr.sort((a, b) => a.averageTime > b.averageTime);
+    userAverages.sort((a, b) => a.userAverage < b.userAverage);
+    countryArr.sort((a, b) => a.averageTime < b.averageTime);
 
     let userString = [];
     let countryString = [];
