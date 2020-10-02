@@ -4,7 +4,7 @@
 
 ### CLI file not completed
 
-### Api endpoints running at https://vercel.com/lawalshalom/rocketchattest/analyze/tasks
+### Api endpoints running at https://rocket-chat-test.vercel.app/
 
 ### Post request takes input string as Request body and Returns output string as value of result object.
 
