@@ -1,6 +1,6 @@
 # Lawal Femi Rochet Chat Challenge
 
-### unit tests run via npm test
+### unit tests run via npm run test
 
 ### CLI file not completed
 
