@@ -25,6 +25,7 @@ form.onsubmit = (e) => {
         const res = await fetch("https://venn-games-project.herokuapp.com/save-user", params);
         const data = await res.json();
         success.innerHTML = data.success;
+        form.reset();
     }
     submitData(params).catch(err => console.log(err));
 }
@@ -34,11 +35,15 @@ getUser.onclick = () => {
     async function getUsers(){
         const res = await fetch("https://venn-games-project.herokuapp.com/get-users", {method: "GET"});
         const data = await res.json();
-        console.log(data);
         const users = data.users.split("},");
         users.pop();
         const usersDiv = document.getElementById("users");
         usersDiv.innerHTML = "";
+        if(users.length < 1){
+            usersDiv.insertAdjacentHTML("beforeend",`
+            <p class="user-item">There are no users saved yet</p>`
+            )
+        }
         users.forEach(item => {
             const user = JSON.parse(item+ "}");
             usersDiv.insertAdjacentHTML("beforeend",`

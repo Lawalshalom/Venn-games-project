@@ -10,7 +10,7 @@
 		<h1>Venn Games</h1>
 		<h3>User Information</h3>
 		<main>
-			<form id="input-form">
+			<form id="input-form" class="flex-column">
 				<input type="text" name="name" id="name" placeholder="Name" required />
 				<input type="number" name="age" id="age" placeholder="Age" required />
 				<input
@@ -22,13 +22,13 @@
 				/>
 				<button type="submit">Submit</button>
 			</form>
-			<div id="loading-div"></div>
-			<div id="success-div"></div>
-			<div id="failure-div"></div>
+			<div id="loading-div" class="flex-column"></div>
+			<div id="success-div" class="flex-column"></div>
+			<div id="failure-div" class="flex-column"></div>
 
-			<div>
+			<div class="flex-column">
 				<button id="get-users">Get Saved Users</button>
-				<div id="users"></div>
+				<div id="users" class="flex-column"></div>
 			</div>
 		</main>
 	</body>

@@ -19,7 +19,7 @@ app.post("/save-user", (req, res) => {
     return myBinaryFile.writeString(user);
   })
   .then(function (string) {
-    res.send({success: "user saved successfully"});
+    res.send({success: "User saved successfully"});
     return myBinaryFile.close();
   })
   .then(function () {
