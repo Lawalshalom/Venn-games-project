@@ -3,10 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=`, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Venn Games Project</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<h1>Home</h1>
+		<h1>User Information</h1>
+		<main>
+			<form id="input-form">
+				<input type="text" name="name" id="name" placeholder="Name" required />
+				<input type="number" name="age" id="age" placeholder="Age" required />
+				<input
+					type="text"
+					name="address"
+					id="address"
+					placeholder="Address"
+					required
+				/>
+				<button type="submit">Submit</button>
+			</form>
+			<div id="loading-div"></div>
+			<div id="success-div"></div>
+			<div id="failure-div"></div>
+
+			<div>
+				<button id="get-users">Get Saved Users</button>
+				<div id="users"></div>
+			</div>
+		</main>
 	</body>
-	<script src="../analyzeTasks.js"></script>
+	<script src="index.js"></script>
 </html>

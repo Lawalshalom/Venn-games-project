@@ -1,13 +1,14 @@
 {
-	"name": "test-node-api",
+	"name": "venn-games-project",
 	"version": "1.0.0",
 	"private": true,
 	"author": "Femi Lawal",
-	"main": "analyzeTasks.js",
+	"main": "server.js",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
+		"binary-file": "^0.2.3",
 		"body-parser": "^1.19.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1"
@@ -15,10 +16,7 @@
 	"scripts": {
 		"start": "node server.js",
 		"build": "npm build",
-		"test": "jest"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
+		"dev": "nodemon server.js"
 	},
 	"browserslist": {
 		"production": [
@@ -33,6 +31,7 @@
 		]
 	},
 	"devDependencies": {
-		"jest": "^26.4.2"
+		"jest": "^26.4.2",
+		"nodemon": "^2.0.6"
 	}
 }
