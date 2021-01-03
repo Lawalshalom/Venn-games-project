@@ -22,7 +22,7 @@ form.onsubmit = (e) => {
     }
 
     async function submitData(params){
-        const res = await fetch("http://localhost:6700/save-user", params);
+        const res = await fetch("https://venn-games-project.herokuapp.com/save-user", params);
         const data = await res.json();
         success.innerHTML = data.success;
     }
@@ -32,7 +32,7 @@ form.onsubmit = (e) => {
 
 getUser.onclick = () => {
     async function getUsers(){
-        const res = await fetch("http://localhost:6700/get-users", {method: "GET"});
+        const res = await fetch("https://venn-games-project.herokuapp.com/get-users", {method: "GET"});
         const data = await res.json();
         console.log(data);
         const users = data.users.split("},");
