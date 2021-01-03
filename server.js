@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const BinaryFile = require('binary-file');
+const dotenv = require("dotenv");
 const path = require("path");
 const app = express();
 
@@ -9,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/public')));
+
+
+dotenv.config();
 
 app.post("/save-user", (req, res) => {
   const {name, age, address} = req.body;
@@ -55,7 +59,7 @@ app.use((req, res) => {
   res.status(404).type('text').send('Not Found');
 });
 
-
-app.listen(6700, () => {
-  console.log(`Your app is listening on port 6700`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Your app is listening on port ${port}`);
 });
