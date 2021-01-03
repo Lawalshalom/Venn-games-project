@@ -10,10 +10,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
-
 app.post("/save-user", (req, res) => {
   const {name, age, address} = req.body;
   const user = JSON.stringify({name, age, address}) + ",";
